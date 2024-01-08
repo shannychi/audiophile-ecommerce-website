@@ -491,3 +491,11 @@ bottom: 20px;
   background: #D87D4A;
   margin-left: 100px;
   }
+
+
+  /**/
+  .quantity{
+    color: #D87D4A;
+    position: absolute;
+    top: 4px;
+  }
