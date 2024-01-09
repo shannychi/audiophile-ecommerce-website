@@ -471,3 +471,272 @@ margin-top: 20px;
   background: #D87D4A;
   margin-left: 100px;
   }
+
+/**/
+  button {
+    cursor: pointer;
+    outline: 0;
+   } 
+  
+   #cart-btn {
+    border: none;
+    font-size: 1.5rem;
+    background: none;
+    color: #FFF;
+   }
+  
+   #cart-count-info {
+    position: absolute;
+    top: 6px;
+    margin-left: 10px;
+    background: #D87D4A;
+    font-size: 1rem;
+    width:  18px;
+    height: 18px;
+    border-radius: 50%;
+    --wekit-border-radius: 50%;
+    --moz-border-radius: 50%;
+    --ms-border-radius:50%;
+    --0-border-raduis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+   }
+  
+   .cart-container {
+    position: absolute;
+  overflow-y: scroll;
+  background: #FFF;
+  object-fit: contain;
+  width: 377px;
+  height: 488px;
+  top: 10%;
+  right: 100px;
+  box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.21);
+  display: none;
+  z-index: 1;
+  margin-top: 40px;
+   }
+  
+   .cart-container::--webkit-scrollbar {
+    width: 8px;
+   }
+  .cart-container::--webkit-scrollbar- thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    --wekit-border-radius: 15px;
+    --moz-border-radius: 15px;
+    --ms-border-radius:15px;
+    --0-border-raduis: 15px;
+  }
+  
+  .show-cart-container{
+    display: block;
+  }
+  
+  .cart-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 30px;
+   margin-top: 40px;
+  }
+  
+  .image-item-info{
+    display: flex;
+    gap: 20px;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  .cart-image{
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    background: #F1F1F1;
+    margin-left: 60px;
+  }
+  
+  
+  .cart-item-del-btn {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    padding: 0.05rem 0.45rem;
+    font-size: 1.4rem;
+    background: #D87D4A;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    --wekit-border-radius: 5px;
+    --moz-border-radius: 5px;
+    --ms-border-radius:5px;
+    --0-border-raduis: 5px;
+  }
+  
+  .cart-item-info{
+  text-align: center;
+  }
+  .cart-item-info span {
+    display: block;
+  }
+  
+  .cart-total {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .cart-total h3 {
+  
+  }
+  
+  .cart-add-remove input{
+    display: inline-flex;
+    border: none;
+    gap : 8px;
+  }
+
+  .cart-background{
+    opacity: 0.4;
+  background: #000;
+  width: 1349px;
+  height: 4075px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  
+  display: none;
+  }
+  
+  .showbackground {
+    display: block;
+  }
+  
+  .cart-item-image{
+    width: 64px;
+    height: 64px;
+    margin: 20px;
+  
+  
+  }
+  
+  .cart0 p{
+    color: #000;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.286px;
+    text-transform: uppercase;
+    margin: 15px;
+    text-align: center;
+  
+  }
+  
+  .remove-text {
+    color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 166.667% */
+  text-decoration-line: underline;
+  opacity: 0.5;
+  margin-left: 150px;
+  }
+  
+  .item-name{
+    color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; 
+  position: relative;
+  bottom: 70px;
+  }
+  
+  
+  .item-price{
+    color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; 
+  opacity: 0.5;
+  position: relative;
+  bottom: 70px;
+  left: 100px;
+  }
+  
+  .item-quantity{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100px;
+    height: 50px;
+  background: #F1F1F1;
+  position: relative;
+  bottom:  70px ;
+  left: 120px;
+  }
+  
+  .item-button{
+   border: none;
+  
+  }
+  
+  .increase{
+    position: relative;
+    left: 15px;
+  }
+  .decrease{
+    position: relative;
+    right: 15px;
+  }
+  
+  .remove-item{
+    position: relative;
+    bottom: 70px;
+    left: 150px;
+    border: none;
+    background: none;
+    color: #000;
+  font-family: 'Manrope',sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 166.667% */
+  text-decoration-line: underline;
+  opacity: 0.5;
+  
+  }
+  
+  .total-price{
+    color: #000;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-left: 170px;
+  }
+  
+  .total-price-p{
+    color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 166.667% */
+  opacity: 0.5;
+  text-align: center;
+  
+  }
