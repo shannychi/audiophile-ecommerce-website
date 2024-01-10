@@ -82,6 +82,36 @@ function addToCart(productId, imageId) {
     calculateTotalQuantity();
   }
 
+  // display summary page
+  function displaySummary() {
+    const cartItems = getCartItems();
+    const summaryItems = document.getElementById('summary-items');
+    const totalElement = document.getElementById('totalPrice');
+    const vatElement = document.getElementById('vatFee');
+    const shippingElement = document.getElementById('shippingPrice');
+    const grandTotalElement = document.getElementById('grandTotal');
+  
+    summaryItems.innerHTML = '';
+  
+    cartItems.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <img src="${getImageUrl(item.imageId)}" alt="${item.name}" class="cart-item-image">
+            <span>${item.name}</span>
+            <span>Quantity: ${item.quantity}</span>
+            <span>Price: $${(item.price * item.quantity).toFixed(2)}</span>
+        `;
+        summaryItems.appendChild(listItem);
+    });
+  
+    const total = calculateTotal();
+  
+    totalElement.textContent = total.totalPrice;
+    vatElement.textContent = total.vatFee;
+    shippingElement.textContent = total.shippingPrice;
+    grandTotalElement.textContent = total.grandTotal;
+  }
+
 
 // function to get image url
   function getImageUrl(imageId) {
@@ -147,7 +177,7 @@ function updateTotalPrice() {
 
   }
 
-
+  displaySummary()
   updateCart();
   increaseCount();
   decreaseCount();
@@ -173,11 +203,43 @@ function updateTotalPrice() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     let totalQuantity = 0;
 
-    // Loop through each item in the cart and sum the quantities
     for (const item of cartItems) {
         totalQuantity += item.quantity || 0;
     }
 
-    // Display the total quantity
     document.getElementById('totalQuantity').textContent = totalQuantity;
 }
+// redirect to checkout page
+function redirectToCheckout() {
+  window.location.href = 'checkout.html';
+}
+/* get items from cart**/
+function getCartItems() {
+  return JSON.parse(localStorage.getItem('cart')) || [];
+}; 
+
+
+/* add up total price, vat and shipping */
+function calculateTotal() {
+  const cartItems = getCartItems();
+
+  let totalPrice = 0;
+  cartItems.forEach(item => {
+      totalPrice += item.price * item.quantity;
+  });
+
+  const vatRate = 0.1; // 10% VAT rate
+  const vatFee = totalPrice * vatRate;
+  const shippingPrice = 10; // Replace with your actual shipping price
+  const grandTotal = totalPrice + vatFee + shippingPrice;
+
+  return {
+      totalPrice: totalPrice.toFixed(2),
+      vatFee: vatFee.toFixed(2),
+      shippingPrice: shippingPrice.toFixed(2),
+      grandTotal: grandTotal.toFixed(2)
+  };
+}
+
+
+

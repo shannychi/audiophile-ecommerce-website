@@ -393,8 +393,11 @@ border: 2px solid #FFF;
 margin-left: 100px;
 
   }
+  li {
+    list-style: none;
+  }
 
-  .Summary-cart{
+  .summary-container{
     width: 350px;
 height: 612px;
 flex-shrink: 0;
@@ -403,7 +406,18 @@ background: #FFF;
 border: 2px solid #FFF;
   }
 
-
+.summary-p{
+  color: #000;
+font-family: 'Manrope', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1.286px;
+text-transform: uppercase;
+margin: 20px;
+}
+  
   .success-modal{
     display: none;
   }
@@ -518,6 +532,12 @@ letter-spacing: -0.214px;
 }
 
 
+.cart-item-image{
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+background: #F1F1F1;
+}
 
   /*footer*/
   .footer-container-product-headphone{
