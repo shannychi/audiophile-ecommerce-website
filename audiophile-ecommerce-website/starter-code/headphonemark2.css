@@ -756,3 +756,35 @@ opacity: 0.5;
 text-align: center;
 
 }
+
+.checkout-cart-item button {
+  width: 313px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #d87d4a;
+  color: #fff;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  margin-bottom: 50px;
+  position: relative;
+  bottom: 5px;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.total-price-checkout-div {
+  position: absolute;
+  bottom: 0;
+}
+
+.total-price-checkout-div p {
+  margin-bottom: 10px;
+  text-align: center;
+}

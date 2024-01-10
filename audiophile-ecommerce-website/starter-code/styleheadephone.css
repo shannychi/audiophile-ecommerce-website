@@ -319,6 +319,7 @@ margin-left: 100px;
 }
 
 /**/
+
 button {
   cursor: pointer;
   outline: 0;
@@ -354,14 +355,15 @@ button {
   position: absolute;
   overflow-y: scroll;
   background: #FFF;
-  width: 40%;
-  height: 600px;
+  object-fit: contain;
+  width: 377px;
+  height: 488px;
   top: 10%;
-  left: 40x;
-  right: 0;
+  right: 100px;
   box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.21);
   display: none;
   z-index: 1;
+  margin-top: 40px;
  }
 
  .cart-container::--webkit-scrollbar {
@@ -443,4 +445,177 @@ text-align: center;
   display: inline-flex;
   border: none;
   gap : 8px;
+}
+
+.cart-background{
+  opacity: 0.4;
+background: #000;
+width: 1349px;
+height: 4075px;
+position: absolute;
+right: 0;
+left: 0;
+
+display: none;
+}
+
+.showbackground {
+  display: block;
+}
+
+.cart-item-image{
+  width: 64px;
+  height: 64px;
+  margin: 20px;
+
+
+}
+
+.cart0 p{
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.286px;
+  text-transform: uppercase;
+  margin: 15px;
+  text-align: center;
+
+}
+
+.remove-text {
+  color: #000;
+font-family: 'Manrope', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 25px; /* 166.667% */
+text-decoration-line: underline;
+opacity: 0.5;
+margin-left: 150px;
+}
+
+.item-name{
+  color: #000;
+font-family: 'Manrope', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px; 
+position: relative;
+bottom: 70px;
+}
+
+
+.item-price{
+  color: #000;
+font-family: 'Manrope', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px; 
+opacity: 0.5;
+position: relative;
+bottom: 70px;
+left: 100px;
+}
+
+.item-quantity{
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100px;
+  height: 50px;
+background: #F1F1F1;
+position: relative;
+bottom:  70px ;
+left: 120px;
+}
+
+.item-button{
+ border: none;
+
+}
+
+.increase{
+  position: relative;
+  left: 15px;
+}
+.decrease{
+  position: relative;
+  right: 15px;
+}
+
+.remove-item{
+  position: relative;
+  bottom: 70px;
+  left: 150px;
+  border: none;
+  background: none;
+  color: #000;
+font-family: 'Manrope',sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 25px; /* 166.667% */
+text-decoration-line: underline;
+opacity: 0.5;
+
+}
+
+.total-price{
+  color: #000;
+text-align: center;
+font-family: 'Manrope', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+margin-left: 170px;
+}
+
+.total-price-p{
+  color: #000;
+font-family: 'Manrope', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 25px; /* 166.667% */
+opacity: 0.5;
+text-align: center;
+
+}
+
+.checkout-cart-item button {
+  width: 313px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #d87d4a;
+  color: #fff;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  margin-bottom: 50px;
+  position: relative;
+  bottom: 5px;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.total-price-checkout-div {
+  position: absolute;
+  bottom: 0;
+}
+
+.total-price-checkout-div p {
+  margin-bottom: 10px;
+  text-align: center;
 }

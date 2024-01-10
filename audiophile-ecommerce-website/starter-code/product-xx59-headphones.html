@@ -40,16 +40,25 @@
               
             </button>
 
+            <div class="cart-background">
+            </div>
             <div class="cart-container">
               <div class="cart-list">
-                
+                <div class="cart0">
+                    <p>cart (<span id="totalQuantity">0</span>)</p>
+                  </div>
                 <!---single line-->
                    <ul id ="cart-item">
                     
                     
                    </ul>
                    
-                   <p>Total Price: $<span id="totalPrice">0.00</span></p>
+                   <div class="total-price-checkout-div">
+                    <p class="total-price-p">Total Price: <span class="total-price">$<span id="totalPrice">0.00</span></span></p>
+                   <div class="checkout-cart-item">
+                    <button>Checkout</button>
+                   </div>
+                   </div>
                   </div>
                     
               </div> 
@@ -87,7 +96,7 @@
 
                <div class="add-to cart">
                 
-                <span class="add-to-cart-num" id="count"> 0</span>
+                <button class="add-to-cart-num" id="count" type="text">0</button>
                 <input  type="button" value="Add to cart" class="add-to-cart-text" onclick="addToCart(8, 'image3') ; increaseCount()">
                </div>
           </div>

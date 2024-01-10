@@ -78,10 +78,12 @@ function addToCart(productId, imageId) {
     });
   
     totalPriceElement.textContent = totalPrice.toFixed(2);
+
+    calculateTotalQuantity();
   }
 
 
-
+// function to get image url
   function getImageUrl(imageId) {
     const imageMap = {
         'image1': './assets/cart/image-xx99-mark-two-headphones.jpg',
@@ -119,7 +121,7 @@ function increaseQuantity(productId) {
     }
   }
 
-
+//function to remove item from the cart
   function removeFromCart(productId) {
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     cartItems = cartItems.filter(item => item.id !== productId);
@@ -127,6 +129,8 @@ function increaseQuantity(productId) {
     updateCart();
   }
 
+
+  //function to updateTotalPrice
 function updateTotalPrice() {
     const cartItems = document.getElementById('cart-item').children;
     let totalPrice = 0;
@@ -147,8 +151,10 @@ function updateTotalPrice() {
   updateCart();
   increaseCount();
   decreaseCount();
-  calculateTOtalQuantity();
+  calculateTotalQuantity();
 
+
+  //function to increase and decrease add to cart button wfen clicked
   function increaseCount() {
     let count = parseInt(document.getElementById('count').textContent);
     document.getElementById('count').textContent = count + 1;
@@ -161,15 +167,17 @@ function updateTotalPrice() {
 
 
  
+  //function to calculate the total number of items in the cart
 
-function calculateTOtalQuantity() {
-   let totalQuantity = 0;
+  function calculateTotalQuantity() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalQuantity = 0;
 
-   for (const item of cartItems) {
-    totalQuantity += item.quantity || 0;
+    // Loop through each item in the cart and sum the quantities
+    for (const item of cartItems) {
+        totalQuantity += item.quantity || 0;
+    }
 
-}
-
-document.getElementById('totalQuantity').textContent = totalQuantity;
-
+    // Display the total quantity
+    document.getElementById('totalQuantity').textContent = totalQuantity;
 }
