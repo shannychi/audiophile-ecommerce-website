@@ -58,7 +58,7 @@
                  <div class="total-price-checkout-div">
                   <p class="total-price-p">Total Price: <span class="total-price">$<span id="totalPrice">0.00</span></span></p>
                  <div class="checkout-cart-item">
-                  <button>Checkout</button>
+                  <button onclick="redirectToCheckout()">Checkout</button>
                  </div>
                  </div>
                 </div>
@@ -201,12 +201,14 @@
 
     </ul>
   
-    <p>Total Price: $<span id="totalPrice">0.00</span></p>
-    <p>SHIPPING: $<span id="shippingPrice">0.00</span></p>
-    <p>VAT (INCLUDED): $<span id="vatFee">0.00</span></p>
-      <p>Grand total:  $ <span id="grandTotal">0.00</span></p>
+    <div class="grandTotal-summary">
+      <p><span class="total-price-summary-checkout"></span><span id="totalPrice"></span></p>
+    <p><span class="total-price-summary-checkout"> SHIPPING</span><span id="shippingPrice">0.00</span></p>
+    <p><span class="total-price-summary-checkout">VAT (INCLUDED)</span><span id="vatFee">0.00</span></p>
+      <p> <span class="total-price-summary-checkout"> Grand total</span><span id="grandTotal">0.00</span></p>
+    </div>
 
-    <button > Continue & pay</button>
+    <button class="Continue-pay"> Continue & pay</button>
    
   </div>
     

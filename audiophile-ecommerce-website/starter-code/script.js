@@ -97,9 +97,10 @@ function addToCart(productId, imageId) {
         const listItem = document.createElement('li');
         listItem.innerHTML = `
             <img src="${getImageUrl(item.imageId)}" alt="${item.name}" class="cart-item-image">
-            <span>${item.name}</span>
-            <span>Quantity: ${item.quantity}</span>
-            <span>Price: $${(item.price * item.quantity).toFixed(2)}</span>
+            <span class="summary-item-name">${item.name}</span>
+            <span class="summary-item-price"> $${(item.price * item.quantity).toFixed(2)}</span>
+            <span class="summary-item-quantity">x ${item.quantity}</span>
+            
         `;
         summaryItems.appendChild(listItem);
     });
@@ -213,6 +214,7 @@ function updateTotalPrice() {
 function redirectToCheckout() {
   window.location.href = 'checkout.html';
 }
+
 /* get items from cart**/
 function getCartItems() {
   return JSON.parse(localStorage.getItem('cart')) || [];
@@ -229,17 +231,21 @@ function calculateTotal() {
   });
 
   const vatRate = 0.1; // 10% VAT rate
-  const vatFee = totalPrice * vatRate;
-  const shippingPrice = 10; // Replace with your actual shipping price
+  const vatFee = totalPrice * vatRate; // Corrected calculation for VAT
+  const shippingPrice = 50; 
   const grandTotal = totalPrice + vatFee + shippingPrice;
 
-  return {
+
+   return {
       totalPrice: totalPrice.toFixed(2),
       vatFee: vatFee.toFixed(2),
       shippingPrice: shippingPrice.toFixed(2),
       grandTotal: grandTotal.toFixed(2)
   };
 }
+
+
+/** checking form vaildation*/
 
 
 

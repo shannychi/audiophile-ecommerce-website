@@ -533,6 +533,7 @@ text-transform: uppercase;
   display: none;
   z-index: 1;
   margin-top: 40px;
+  position: relative;
  }
 
  .cart-container::--webkit-scrollbar {
@@ -772,11 +773,13 @@ text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: none;
-  margin-bottom: 50px;
-  position: relative;
-  bottom: 5px;
-  align-items: center;
-  margin-left: 30px;
+ 
+    }
+
+
+
+.checkout-cart-item{
+
 }
 
 .total-price-checkout-div {

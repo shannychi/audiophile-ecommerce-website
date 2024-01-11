@@ -539,6 +539,127 @@ letter-spacing: -0.214px;
 background: #F1F1F1;
 }
 
+.summary-item-name{
+  color: #000;
+font-family: 'Manrope', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px; 
+position: relative;
+bottom: 60px;
+}
+
+.summary-item-price{
+  color: #000;
+font-family: 'Manrope' ,sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px;
+opacity: 0.5;
+position: relative;
+bottom: 30px;
+right: 50px;
+
+}
+
+.summary-item-quantity{
+  color: #000;
+text-align: right;
+font-family: 'Manrope', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px; 
+opacity: 0.5;
+position: relative;
+bottom: 40px;
+}
+
+
+.total-price-summary-checkout{
+  color: #000;
+font-family: 'Manrope', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 25px; 
+opacity: 0.5;
+}
+
+#totalPrice, #shippingPrice{
+  color: #000;
+text-align: left;
+font-family: 'Manrope', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+position: relative;
+left: 140px;
+}
+
+ #vatFee {
+  color: #000;
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  left: 80px;
+ }
+
+ .dollar-sign{
+  color: #000;
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  left: 80px;
+ }
+
+ #grandTotal {
+  color: #000;
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  left: 100px;
+ }
+
+.grandTotal-summary{
+  margin: 20px;
+}
+
+.Continue-pay {
+  width: 284px;
+  height: 48px;
+  background: #D87D4A;
+  color: #FFF;
+text-align: center;
+font-family: 'Manrope' ,sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1px;
+text-transform: uppercase;
+border: none;
+margin-left: 30px;
+}
   /*footer*/
   .footer-container-product-headphone{
     width: 100%;
