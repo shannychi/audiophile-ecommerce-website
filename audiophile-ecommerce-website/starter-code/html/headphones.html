@@ -8,14 +8,15 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=League+Spartan:wght@300;400;500&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:wght@500&display=swap"
 			rel="stylesheet" />
-		<link rel="stylesheet" href="./css/styleHome.css" />
+		<link rel="stylesheet" href="../css/styleheadephone.css" />
 		<title>Audiophile e-commerce website</title>
 	</head>
+
 	<body>
 		<div class="container">
-			<div class="hero">
+			<div class="headephone-hero">
 				<header>
-					<div class="header-container">
+					<div class="header-container-headphone">
 						<!--header logo-->
 						<div class="header-logo">
 							<svg
@@ -34,16 +35,14 @@
 						<!--nav bar-->
 						<div class="nav-container">
 							<nav class="navbar-home">
-								<a href="./" class="htmlLink">Home</a>
-								<a
-									href="./html/headphones.html"
-									class="htmlLink"
+								<a href="../" class="htmlLink">Home</a>
+								<a href="./headphones.html" class="htmlLink"
 									>Headphones</a
 								>
-								<a href="./html/speakers.html" class="htmlLink"
+								<a href="./speakers.html" class="htmlLink"
 									>Speakers</a
 								>
-								<a href="./html/earphones.html" class="htmlLink"
+								<a href="./earphones.html" class="htmlLink"
 									>Earphones</a
 								>
 							</nav>
@@ -65,217 +64,230 @@
 								</svg>
 							</button>
 						</div>
+					</div>
+					<div class="empty-header"></div>
+					<div class="hero-text-headphone">
+						<h1>Headphones</h1>
+					</div>
+					<div class="cart-background"></div>
+					<div class="cart-container">
+						<div class="cart-list">
+							<div class="cart0">
+								<p>cart (<span id="totalQuantity">0</span>)</p>
+							</div>
+							<!---single line-->
+							<ul id="cart-item"></ul>
 
-						<div class="cart-container">
-							<div class="cart-list">
-								<div class="cart0">
-									<p>
-										cart (<span id="totalQuantity">0</span>)
-									</p>
-								</div>
-								<!---single line-->
-								<ul id="cart-item"></ul>
-
-								<div class="total-price-checkout-div">
-									<p class="total-price-p">
-										Total Price:
-										<span class="total-price"
-											>$<span id="totalPrice"
-												>0.00</span
-											></span
-										>
-									</p>
-									<div class="checkout-cart-item">
-										<button onclick="redirectToCheckout()">
-											Checkout
-										</button>
-									</div>
+							<div class="total-price-checkout-div">
+								<p class="total-price-p">
+									Total Price:
+									<span class="total-price"
+										>$<span id="totalPrice"
+											>0.00</span
+										></span
+									>
+								</p>
+								<div class="checkout-cart-item">
+									<button onclick="redirectToCheckout()">
+										Checkout
+									</button>
 								</div>
 							</div>
 						</div>
-
-						<!---->
 					</div>
-					<div class="empty-header"></div>
 				</header>
-				<!--hero-->
-				<div class="hero-text-container">
-					<div class="new-product-div">
-						<h4 class="product">NEW PRODUCT</h4>
-						<h1>XX99 Mark II Headphones</h1>
-						<p>
-							Experience natural, lifelike audio and exceptional
-							build quality made for the passionate music
-							enthusiast.
-						</p>
-					</div>
-					<div class="new-product-div-button">
-						<a href="./product-xx99-mark-two-headphones.html">
-							<button>See Product</button>
-						</a>
-					</div>
-					<!---->
-				</div>
 			</div>
-
-			<!--main-->
-			<div class="main-container">
-				<!--product preview-->
-				<div class="product-main">
-					<div class="product-preview">
+			<!--product display-->
+			<div class="main-container-headphones">
+				<!--XX99 mark I-->
+				<div class="headphone-display">
+					<div class="headphone-display-image">
 						<img
-							src="./assets/product-xx99-mark-one-headphones/desktop/image-product.jpg"
-							alt="headPhone" />
-						<h1>Headphones</h1>
-						<p>
-							<button class="shopbutton">
-								Shop
-								<a class="shop-icon" href="./headphones.html"
-									><svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="8"
-										height="12"
-										viewBox="0 0 8 12"
-										fill="none">
-										<path
-											d="M1.3219 1L6.3219 6L1.3219 11"
-											stroke="#D87D4A"
-											stroke-width="2" /></svg
-								></a>
-							</button>
-						</p>
+							src="../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg"
+							alt="headphone" />
 					</div>
-
-					<div class="product-preview">
-						<img
-							src="./assets/product-zx9-speaker/desktop/image-category-page-preview.jpg"
-							alt="speaker" />
-						<h1>SPEAKERS</h1>
-						<p>
-							<button class="shopbutton">
-								Shop
-								<a class="shop-icon" href="./speakers.html"
-									><svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="8"
-										height="12"
-										viewBox="0 0 8 12"
-										fill="none">
-										<path
-											d="M1.3219 1L6.3219 6L1.3219 11"
-											stroke="#D87D4A"
-											stroke-width="2" /></svg
-								></a>
-							</button>
-						</p>
-					</div>
-
-					<div class="product-preview">
-						<img
-							src="./assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
-							alt="speaker" />
-						<h1>EARPHONES</h1>
-						<p>
-							<button class="shopbutton">
-								Shop
-								<a class="shop-icon" href="./earphones.html"
-									><svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="8"
-										height="12"
-										viewBox="0 0 8 12"
-										fill="none">
-										<path
-											d="M1.3219 1L6.3219 6L1.3219 11"
-											stroke="#D87D4A"
-											stroke-width="2" /></svg
-								></a>
-							</button>
-						</p>
-					</div>
-				</div>
-
-				<!--specker display-->
-				<div class="specker-Zx9-display">
-					<div class="specker-ZX9-image">
-						<img
-							src="./assets/home/desktop/image-speaker-zx9.png" />
-					</div>
-					<div class="specker-ZX9-text">
-						<h1>ZX9 <br />SPEAKER</h1>
-						<p>
-							Upgrade to premium speakers that are phenomenally
-							built to deliver truly remarkable sound.
-						</p>
-						<div class="specker-ZX9-button">
-							<a href="./product-zx9-speaker.html">
-								<button class="seeproductHome1">
-									See Product
-								</button>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="specker-zx7-text">
-					<img
-						src="./assets/home/desktop/image-speaker-zx7.jpg"
-						alt="" />
-					<h1>ZX7 SPEAKER</h1>
-					<a href="./product-zx7-speaker.html">
-						<button class="seeproductHome">See Product</button>
-					</a>
-				</div>
-
-				<!--earphone display-->
-				<div class="earphones-display">
-					<div class="image-earphones-yx1">
-						<img
-							src="./assets/home/desktop/image-earphones-yx1.jpg"
-							alt="earphone" />
-					</div>
-					<div class="earphone-yx1-text">
-						<h1>YX1 EARPHONES</h1>
-						<div class="earphone-yx1-button">
-							<a href="./product-earphones.html">
-								<button class="seeproductHome">
-									See Product
-								</button>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!---->
-				<div class="Best-gear">
-					<div class="Best-gear-text">
+					<div class="headphone-display-text">
+						<h4>New product</h4>
 						<h1>
-							Bringing you the
-							<span class="best">best</span> audio gear
+							XX99 Mark II <br />
+							Headphones
 						</h1>
 						<p>
-							Located at the heart of New York City, Audiophile is
-							the premier store for high end headphones,
-							earphones, speakers, and audio accessories. We have
-							a large showroom and luxury demonstration rooms
-							available for you to browse and experience a wide
-							range of our products. Stop by our store to meet
-							some of the fantastic people who make Audiophile the
-							best place to buy your portable audio equipment.
+							The new XX99 Mark II headphones is the pinnacle of
+							pristine audio. It redefines your premium headphone
+							experience by reproducing the balanced depth and
+							precision of studio-quality sound.
 						</p>
-					</div>
-					<div class="Best-gear-image">
-						<img
-							src="./assets/shared/desktop/image-best-gear.jpg" />
+						<div class="headphone-display-button">
+							<a href="./product-xx99-mark-two-headphones.html">
+								<button>See product</button>
+							</a>
+						</div>
 					</div>
 				</div>
-				<!---->
+
+				<!--XX99 mark II-->
+
+				<div class="headphone-display">
+					<div class="headphone-display-text">
+						<h1>
+							XX99 Mark I <br />
+							Headphones
+						</h1>
+						<p>
+							As the gold standard for headphones, the classic
+							XX99 Mark I offers detailed and accurate audio
+							reproduction for audiophiles, mixing engineers, and
+							music aficionados alike in studios and on the go.
+						</p>
+						<div class="headphone-display-button">
+							<a href="./product-xx99-mark-one-headphones.html">
+								<button>See product</button>
+							</a>
+						</div>
+					</div>
+					<div class="headphone-display-image">
+						<img
+							src="../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg"
+							alt="headphone" />
+					</div>
+				</div>
+
+				<!-- XX59 Headphones-->
+
+				<div class="headphone-display">
+					<div class="headphone-display-image">
+						<img
+							src="../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg"
+							alt="headphone" />
+					</div>
+					<div class="headphone-display-text">
+						<h1>
+							XX59 <br />
+							Headphones
+						</h1>
+						<p>
+							Enjoy your audio almost anywhere and customize it to
+							your specific tastes with the XX59 headphones. The
+							stylish yet durable versatile wireless headset is a
+							brilliant companion at home or on the move.
+						</p>
+						<div class="headphone-display-button">
+							<a href="./product-xx59-headphones.html">
+								<button>See product</button>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
+
+			<!--product preview shop now-->
+			<div class="product-main-headphone">
+				<div class="product-preview-headphone">
+					<img
+						src="../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg"
+						alt="headPhone" />
+					<h1>Headphones</h1>
+					<p>
+						<button class="shopbutton">
+							Shop
+							<a class="shop-icon" href="./headphones.html"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="8"
+									height="12"
+									viewBox="0 0 8 12"
+									fill="none">
+									<path
+										d="M1.3219 1L6.3219 6L1.3219 11"
+										stroke="#D87D4A"
+										stroke-width="2" /></svg
+							></a>
+						</button>
+					</p>
+				</div>
+
+				<div class="product-preview-headphone">
+					<img
+						src="../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg"
+						alt="speaker" />
+					<h1>SPEAKERS</h1>
+					<p>
+						<button class="shopbutton">
+							Shop
+							<a class="shop-icon" href="./speakers.html"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="8"
+									height="12"
+									viewBox="0 0 8 12"
+									fill="none">
+									<path
+										d="M1.3219 1L6.3219 6L1.3219 11"
+										stroke="#D87D4A"
+										stroke-width="2" /></svg
+							></a>
+						</button>
+					</p>
+				</div>
+
+				<div class="product-preview-headphone">
+					<img
+						src="../assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
+						alt="speaker" />
+					<h1>EARPHONES</h1>
+					<p>
+						<button class="shopbutton">
+							Shop
+							<a class="shop-icon" href="./earphones.html"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="8"
+									height="12"
+									viewBox="0 0 8 12"
+									fill="none">
+									<path
+										d="M1.3219 1L6.3219 6L1.3219 11"
+										stroke="#D87D4A"
+										stroke-width="2" /></svg
+							></a>
+						</button>
+					</p>
+				</div>
+			</div>
+			<!--best gear-->
+			<div class="Best-gear-headphone">
+				<div class="Best-gear-text-headphone">
+					<h1>
+						Bringing you the
+						<span class="best-headphone">best</span> audio gear
+					</h1>
+					<p>
+						Located at the heart of New York City, Audiophile is the
+						premier store for high end headphones, earphones,
+						speakers, and audio accessories. We have a large
+						showroom and luxury demonstration rooms available for
+						you to browse and experience a wide range of our
+						products. Stop by our store to meet some of the
+						fantastic people who make Audiophile the best place to
+						buy your portable audio equipment.
+					</p>
+				</div>
+				<div class="Best-gear-image-headphone">
+					<img
+						src="../assets/shared/desktop/image-best-gear.jpg"
+						alt="man" />
+				</div>
+			</div>
+			<!---->
 		</div>
+		<!--footer-->
+
 		<footer>
-			<div class="footer-container">
-				<div class="empty-footer"></div>
-				<div class="footer-navbar">
-					<div class="footer-logo">
+			<div class="footer-container-headphone">
+				<div class="empty-footer-headphone"></div>
+				<div class="footer-navbar-headphone">
+					<div class="footer-logo-headphone">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="143"
@@ -289,24 +301,24 @@
 								fill="white" />
 						</svg>
 					</div>
-					<div class="footer-nav">
+					<div class="footer-nav-headphone">
 						<nav>
-							<a href="/" class="htmlLink">Home</a>
-							<a href="./html/headphones.html" class="htmlLink">
+							<a href="../" class="htmlLink">Home</a>
+							<a href="./headphones.html" class="htmlLink">
 								Headphones</a
 							>
-							<a href="./html/speakers.html" class="htmlLink"
+							<a href="./speakers.html" class="htmlLink"
 								>Speakers</a
 							>
-							<a href="./html/earphones.html" class="htmlLink">
+							<a href="./earphones.html" class="htmlLink">
 								Earphones</a
 							>
 						</nav>
 					</div>
 				</div>
 
-				<div class="footer-text">
-					<div class="Audiophile">
+				<div class="footer-text-headphone">
+					<div class="Audiophile-headphone">
 						<p>
 							Audiophile is an all in one stop to fulfill your
 							audio needs. We're a small team of music lovers and
@@ -315,8 +327,8 @@
 							demo facility - we’re open 7 days a week.
 						</p>
 					</div>
-					<div class="social">
-						<a href="#" class="social-icon"
+					<div class="social-headphone">
+						<a href="#"
 							><svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -327,7 +339,7 @@
 									d="M22.675 0H1.325C0.593 0 0 0.593 0 1.325V22.676C0 23.407 0.593 24 1.325 24H12.82V14.706H9.692V11.084H12.82V8.413C12.82 5.313 14.713 3.625 17.479 3.625C18.804 3.625 19.942 3.724 20.274 3.768V7.008L18.356 7.009C16.852 7.009 16.561 7.724 16.561 8.772V11.085H20.148L19.681 14.707H16.561V24H22.677C23.407 24 24 23.407 24 22.675V1.325C24 0.593 23.407 0 22.675 0Z"
 									fill="white" /></svg
 						></a>
-						<a class="social-icon">
+						<a>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -340,7 +352,7 @@
 							</svg>
 						</a>
 
-						<a class="social-icon">
+						<a>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -357,13 +369,13 @@
 					</div>
 				</div>
 
-				<div class="Copyright">
+				<div class="Copyright-headphone">
 					<p>Copyright 2021. All Rights Reserved</p>
 				</div>
 				<!---->
 			</div>
 		</footer>
 
-		<script src="./script.js"></script>
+		<script src="../script.js"></script>
 	</body>
 </html>
