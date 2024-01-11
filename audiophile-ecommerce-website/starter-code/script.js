@@ -269,6 +269,8 @@ function handleCheckboxChange() {
 
 
 //form vaildation
+
+let selectedItems = JSON.parse(localStorage.getItem('cart')) || [];
 function submitForm(event) {
   event.preventDefault();
 
@@ -285,7 +287,6 @@ function submitForm(event) {
     alert('Please fill in all required fields.');
     return;
   }
-
 
   // If all validations pass, show the thank you page
   document.getElementById('checkoutForm').style.display = 'none';
