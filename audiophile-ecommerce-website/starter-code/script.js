@@ -83,7 +83,7 @@ function addToCart(productId, imageId) {
   }
 
   // display summary page
-  function displaySummary() {
+ /* function displaySummary() {
     const cartItems = getCartItems();
     const summaryItems = document.getElementById('summary-items');
     const totalElement = document.getElementById('totalPriceSumary');
@@ -112,7 +112,7 @@ function addToCart(productId, imageId) {
     shippingElement.textContent = total.shippingPrice;
     grandTotalElement.textContent = total.grandTotal;
   }
-
+*/
 
 // function to get image url
   function getImageUrl(imageId) {
@@ -178,7 +178,7 @@ function updateTotalPrice() {
 
   }
 
-  displaySummary()
+  /*displaySummary()*/
   updateCart();
   increaseCount();
   decreaseCount();
@@ -224,7 +224,7 @@ function getCartItems() {
 
 
 /* add up total price, vat and shipping */
-function calculateTotal() {
+/*function calculateTotal() {
   const cartItems = getCartItems();
 
   let totalPrice = 0;
@@ -244,7 +244,7 @@ function calculateTotal() {
       shippingPrice: shippingPrice.toFixed(2),
       grandTotal: grandTotal.toFixed(2)
   };
-}
+}*/
 
 
 /** checking which checkbox is been selected*/
@@ -269,8 +269,6 @@ function handleCheckboxChange() {
 
 
 //form vaildation
-
-let selectedItems = JSON.parse(localStorage.getItem('cart')) || [];
 function submitForm(event) {
   event.preventDefault();
 

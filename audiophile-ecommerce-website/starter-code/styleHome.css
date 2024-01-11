@@ -929,9 +929,9 @@ bottom: 20px;
     border: none;
   }
   
-  .shopbutton:active, .shopbutton:hover{
+  /*.shopbutton:active, .shopbutton:hover{
     color: #D87D4A;
-  }
+  }*/
 
 
   .seeproductHome:active, .seeproductHome:hover {
