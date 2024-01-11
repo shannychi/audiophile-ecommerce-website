@@ -759,3 +759,16 @@ button {
   margin-bottom: 10px;
   text-align: center;
 }
+
+
+button:active, button:hover {
+  background: #FBAF85;
+}
+
+.shopbutton{
+  border: none;
+}
+
+/*.shopbutton:active, .shopbutton:hover{
+  color: #D87D4A;
+}*/

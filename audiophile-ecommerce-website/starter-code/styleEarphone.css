@@ -620,3 +620,11 @@
     margin-bottom: 10px;
     text-align: center;
   }
+
+  .shopbutton{
+    border: none;
+  }
+
+  .shopbutton:active, .shopbutton:hover{
+    color: #D87D4A;
+  }
