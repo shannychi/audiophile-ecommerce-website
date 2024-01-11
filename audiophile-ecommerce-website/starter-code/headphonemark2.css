@@ -773,6 +773,11 @@ text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: none;
+  margin-bottom: 50px;
+  position: relative;
+  bottom: 5px;
+  align-items: center;
+  margin-left: 30px;
  
     }
 

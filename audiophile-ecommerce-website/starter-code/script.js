@@ -44,7 +44,7 @@ function addToCart(productId, imageId) {
   }
 
 
-
+//update cart
   function updateCart() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     const cartList = document.getElementById('cart-item');
@@ -86,7 +86,7 @@ function addToCart(productId, imageId) {
   function displaySummary() {
     const cartItems = getCartItems();
     const summaryItems = document.getElementById('summary-items');
-    const totalElement = document.getElementById('totalPrice');
+    const totalElement = document.getElementById('totalPriceSumary');
     const vatElement = document.getElementById('vatFee');
     const shippingElement = document.getElementById('shippingPrice');
     const grandTotalElement = document.getElementById('grandTotal');
@@ -125,7 +125,7 @@ function addToCart(productId, imageId) {
        'image6': './assets/cart/image-zx9-speaker.jpg',
     };
 
-    // Return the corresponding image URL if found, or a default URL if not found
+
     return imageMap[imageId] || './assets/cart/default-image.jpg';
 }
 
@@ -183,6 +183,8 @@ function updateTotalPrice() {
   increaseCount();
   decreaseCount();
   calculateTotalQuantity();
+  submitForm(event);
+  
 
 
   //function to increase and decrease add to cart button wfen clicked
@@ -245,7 +247,47 @@ function calculateTotal() {
 }
 
 
-/** checking form vaildation*/
+/** checking which checkbox is been selected*/
+
+function handleCheckboxChange() {
+  var eMoneyCheckbox = document.getElementById('eMoney');
+  var cashOnDeliveryCheckbox = document.getElementById('CashOnDelivery');
+  var eMoneyDetails = document.getElementById('eMoneyDetails');
+  var cashOnDeliveryDetails = document.getElementById('cashOnDeliveryDetails');
+
+  if (eMoneyCheckbox.checked) {
+    eMoneyDetails.classList.remove('hidden');
+    cashOnDeliveryDetails.classList.add('hidden');
+  } else if (cashOnDeliveryCheckbox.checked) {
+    cashOnDeliveryDetails.classList.remove('hidden');
+    eMoneyDetails.classList.add('hidden');
+  } else {
+    eMoneyDetails.classList.add('hidden');
+    cashOnDeliveryDetails.classList.add('hidden');
+  }
+}
 
 
+//form vaildation
+function submitForm(event) {
+  event.preventDefault();
 
+
+  const name = document.getElementById('Name').value.trim();
+  const email = document.getElementById('Email').value.trim();
+  const phoneNumber = document.getElementById('phonenumber').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const zipCode = document.getElementById('ZIPcode').value.trim();
+  const city = document.getElementById('City').value.trim();
+  const country = document.getElementById('Country').value.trim();
+
+  if (!name || !email || !phoneNumber || !address || !zipCode || !city || !country) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+
+  // If all validations pass, show the thank you page
+  document.getElementById('checkoutForm').style.display = 'none';
+  document.getElementById('thankYouPage').style.display = 'block';
+}
