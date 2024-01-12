@@ -1,1 +1,1 @@
-used local storage to data in the cart
+used local storage to store data in the cart
