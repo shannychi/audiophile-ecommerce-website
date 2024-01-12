@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=League+Spartan:wght@300;400;500&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./checkout.css"/>
-    <title>Audiophile e-commerce website</title>
-  </head>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=League+Spartan:wght@300;400;500&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/headphonemark2.css"/>
+  <title>Audiophile e-commerce website</title>
+</head>
 
 <body>
   <div class="container">
@@ -27,261 +25,219 @@
           <!--nav bar-->
           <div class="nav-container">
             <nav class="navbar-home">
-              <a href="./index.html" class="htmlLink">Home</a>
+              <a href="../" class="htmlLink">Home</a>
               <a href="./headphones.html" class="htmlLink">Headphones</a>
               <a href="./speakers.html" class="htmlLink">Speakers</a>
               <a href="./earphones.html" class="htmlLink">Earphones</a>
             </nav>
           </div>
           <!--shopping cart-->
-          <div class="shooping-cart">
+          <div class="shooping-cart" id="cart">
             <button type="button" id="cart-btn">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.01883 13.1946H8.01776C7.64161 13.1955 7.33595 13.491 7.33595 13.8542C7.33595 14.2179 7.64268 14.5139 8.01954 14.5139H20.4154C20.793 14.5139 21.099 14.8092 21.099 15.1736C21.099 15.538 20.793 15.8333 20.4154 15.8333H19.25H9.25H8.01954C6.88876 15.8333 5.96876 14.9455 5.96876 13.8542C5.96876 13.0421 6.47843 12.343 7.20493 12.0382L4.73686 1.31944H1.18359C0.806016 1.31944 0.5 1.02412 0.5 0.659722C0.5 0.295329 0.806016 0 1.18359 0H5.28516C5.6056 0 5.88295 0.214753 5.95256 0.516611L6.44122 2.63889H23.1498C23.3643 2.63889 23.5663 2.73613 23.6956 2.9014C23.8246 3.06668 23.8659 3.28074 23.807 3.47986L21.0726 12.716C20.9888 12.9991 20.7205 13.1944 20.4154 13.1944H8.0215L8.01883 13.1946ZM9.25 15.8333C10.3987 15.8333 11.3333 16.7679 11.3333 17.9167C11.3333 19.0654 10.3987 20 9.25 20C8.10127 20 7.16667 19.0654 7.16667 17.9167C7.16667 16.7679 8.10127 15.8333 9.25 15.8333ZM19.25 15.8333C20.3987 15.8333 21.3333 16.7679 21.3333 17.9167C21.3333 19.0654 20.3987 20 19.25 20C18.1013 20 17.1667 19.0654 17.1667 17.9167C17.1667 16.7679 18.1013 15.8333 19.25 15.8333ZM19.8997 11.875L22.2435 3.95833H6.74492L8.56784 11.875H19.8997ZM9.94444 17.9167C9.94444 17.5338 9.63285 17.2222 9.25 17.2222C8.86715 17.2222 8.55556 17.5338 8.55556 17.9167C8.55556 18.2995 8.86715 18.6111 9.25 18.6111C9.63285 18.6111 9.94444 18.2995 9.94444 17.9167ZM19.25 17.2222C19.6328 17.2222 19.9444 17.5338 19.9444 17.9167C19.9444 18.2995 19.6328 18.6111 19.25 18.6111C18.8672 18.6111 18.5556 18.2995 18.5556 17.9167C18.5556 17.5338 18.8672 17.2222 19.25 17.2222Z" fill="white"/>
               </svg>
-             
+              
             </button>
-            
+
+            <div class="cart-background">
+            </div>
+            <div class="cart-container">
+              <div class="cart-list">
+                <div class="cart0">
+                    <p>cart (<span id="totalQuantity">0</span>)</p>
+                  </div>
+                <!---single line-->
+                   <ul id ="cart-item">
+                    
+                    
+                   </ul>
+                   
+                   <div class="total-price-checkout-div">
+                    <p class="total-price-p">Total Price: <span class="total-price">$<span id="totalPrice">0.00</span></span></p>
+                   <div class="checkout-cart-item">
+                    <button  onclick=" redirectToCheckout()">Checkout</button>
+                   </div>
+                   </div>
+                  </div>
+                    
+              </div> 
+              
+                <!--end line-->
+                
+            </div>
+               
           </div>
-          
-          <div class="cart-container">
-            <div class="cart-list">
-              <div class="cart0">
-                <p>cart (<span id="totalQuantity">0</span>)</p>
-              </div>
-              <!---single line-->
-                 <ul id ="cart-item">
-                  
-                  
-                 </ul>
-                 
-                 <div class="total-price-checkout-div">
-                  <p class="total-price-p">Total Price: <span class="total-price">$<span id="totalPrice">0.00</span></span></p>
-                 <div class="checkout-cart-item">
-                  <button onclick="redirectToCheckout()">Checkout</button>
-                 </div>
-                 </div>
-                </div>
-                  
-            </div> 
-      
-      
+          <!--ending cart-container-->
         </div>
       </header>
       </div>
-  
-<!--checkout form-->
-<div class="Checkout-container-form">
-  
-      <!---->
+
+
+      <!--xx99-mark-2-headphone-->
       <div class="xx99-mark-2-headphone">
         <div class="go-back">
-          <a href="./index.html">
-            <button class="goback">GO Back</button>
+          <a href="./headphones.html">
+            <button>GO Back</button>
           </a>
         </div>
 
+
+        <div class="xx99-mark-2 product" data-name="xx99 I" data-price='1750' data-id="8">
+          <div class="xx99-mark-2-image">
+            <img src="../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg"/>
+          </div>
         
-          <div>
-            <form id="checkoutForm" onsubmit="submitForm(event)">
-              <div  class="flex-form-summary">
-              <div class="form-container">
-                <div class="checkout-text">
-                  <h1>Checkout</h1>
-                </div>
-                <div class="Billing-details">
-                  <p> Billing details</p>
-          
-                  <div class="Billing-details-input">
-                    <div>
-                      <label for="Name"> Name</label>
-                  <input type="text" name="Name" id="Name" placeholder="Alexei Ward"/>
-                    </div>
-          
-                  <div>
-                    <label for="Email"> Email address</label>
-                  <input type="email" name="Email" id="Email" placeholder="alexei@mail.com"/>
-                  </div>
-                  </div>
+          <div class="xx99-mark-2-text">
+        
+            <h1>XX59 <br/> Headphones</h1>
+            <p>Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move. </p>
+               <h5>$ 899</h5>
 
-                  <div class="Billing-details-input">
-                    <div>
-                      <label for="phonenumber"> Phone Number</label>
-                    <input type="" name="phonenumber" id="phonenumber" placeholder="+1 202-555-0136">
-                    </div>
-
-                    <div>
-                      
-                    </div>
-                  </div>
-            
-                  
-                  
-                 
-                </div>
+               <div class="add-to cart">
+                
+                <button class="add-to-cart-num" id="count" type="text">0</button>
+                <input  type="button" value="Add to cart" class="add-to-cart-text" onclick="addToCart(8, 'image3') ; increaseCount()">
+               </div>
+          </div>
+        </div>
+<!-- product Features-->
+        <div class="product-features">
+          <div class="Features-text-1">
+            <h1>FEATURES</h1>
+            <p>These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.
+            </p>
+            <p class="p2">
+              More than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.</p>
+          </div>
+          <div class="Features-text-2">
+            <h1>in the box</h1>
+            <p><span class="numhers">1x </span> &nbsp Headphone unit</p>
+            <p><span class="numhers"> 2x</span> &nbsp Replacement earcups</p>
+            <p><span class="numhers">1x </span> &nbsp Headphone unit</p>
+            <p><span class="numhers"> 1x</span> &nbsp 3.5mm 5m audio cable</p>
           
-                <div class="shipping-info">
-                  <p>shipping info</p>
-                  <div class="address-div">
-                    <label for="address"> Address</label>
-                    <input type="text" name="address" id="address" placeholder="1137 Williams Avenue"/>
-                  </div>
-                    <div class="shipping-info-input">
-                      <div>
-                        <label for="ZIPcode"> ZIP code</label>
-                      <input type="text" name="ZIPcode" id="ZIPcode" placeholder="10001"/>
-                      </div>
-              
-                      <div>
-                        <label for="City">City</label>
-                      <input type="text" name="City" id="City" placeholder="New York"/>
-                      </div>
-                    </div>
+          </div>
+        </div>
 
-                    <div class="shipping-info-input">
-                      <div>
-                        <label for=" Country">  Country</label>
-                      <input type="" name="Country" id="Country" placeholder="United States">
-                      </div>
 
-                      <div></div>
-                    </div>
-                </div>
-          
-                <div class="payment-details">
-                  <p class="payment-details-p">payment details</p>
-                  <div class="payment-details-flex">
-                    <div>
-                      <p class="payment-details-p2">Payment Method</p>
-                    </div>
-          
-                    <div>
-                      
-                      <div class="checkbox-flex">
-                        <div class="checkbox-flex-input">
-                          <input type="checkbox" name="e-Money" id="eMoney" value="e-Money" onchange="handleCheckboxChange()" class="changecheckbox"/>
-                          <label for="e-Money" class="checkbox-label">e-Money</label>
-                        </div>
-                        <div class="checkbox-flex-input">
-                          <input type="checkbox" name=" Cash on delivery" id="CashOnDelivery" value=" Cash on delivery" onchange="handleCheckboxChange()" class="changecheckbox"/>
-                      <label for="CashOnDelivery" class="checkbox-label">Cash on delivery</label>
-                        </div>
-                      </div>
-                      
-                        <div id="cashOnDeliveryDetails" class="hidden">
-                          <div class="CashOnDelivery-flex">
-                              <div>
-                         <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg"><path d="M46.594 8.438H42.28c-.448 0-.869.213-1.134.574l-2.694 3.674a1.15 1.15 0 1 1-1.848-1.37c2.568-3.53 2.864-3.545 2.864-4.285 0-.779-.636-1.406-1.407-1.406h-5.404a17.658 17.658 0 0 1 9.606-2.813h4.33a1.406 1.406 0 0 0 0-2.812h-4.33c-5.277 0-10.33 2.02-14.142 5.625h-8.34c-.777 0-1.407.63-1.407 1.406v9.938H9.844c-.777 0-1.406.63-1.406 1.406v15.6a14.053 14.053 0 0 0-7.824 3.089 1.406 1.406 0 1 0 1.772 2.185 11.226 11.226 0 0 1 7.048-2.499h3.129c.775 0 1.406.63 1.406 1.406 0 .776-.631 1.407-1.406 1.407H8.436a1.406 1.406 0 0 0 0 2.812h13.728a4.226 4.226 0 0 1-3.977 2.813H1.405a1.406 1.406 0 0 0 0 2.812h16.782c3.395 0 6.236-2.42 6.89-5.625h7.36c.776 0 1.406-.63 1.406-1.406V25.312h9.843c.777 0 1.407-.63 1.407-1.406V11.25h1.5a1.406 1.406 0 0 0 0-2.813ZM33.61 17.599a1.404 1.404 0 0 0-1.172-.63h-3.085c-1.084-1.834.241-4.172 2.381-4.172 2.531 0 3.708 3.115 1.876 4.802ZM21.188 8.437h14.06c-.744 1.03-1.057 1.305-1.352 1.983-4.216-1.779-8.726 2.057-7.559 6.549h-5.15V8.437ZM19.78 19.782h2.813v5.625H19.78v-5.625Zm11.25 19.782h-14.49c.969-2.735-1.07-5.626-3.979-5.626H11.25V19.782h5.719v7.032c0 .776.63 1.406 1.406 1.406H24c.777 0 1.406-.63 1.406-1.407v-7.03h5.625v19.78ZM33.844 22.5v-1.771a5.56 5.56 0 0 0 3.453-4.769 3.954 3.954 0 0 0 3.424-1.611l1.56-2.127V22.5h-8.437Z" fill="#D87D4A"/></svg>
-                          
-                          </div>
+        <div class="product-features-imgaes">
+          <div class="colume-images">
+            <div>
+              <img src="../assets/product-xx59-headphones/desktop/image-gallery-1.jpg" alt="image" class="colume-images-1"/>
+            </div>
+            <div>
+              <img src="../assets/product-xx59-headphones/desktop/image-gallery-2.jpg" alt="image" class="colume-images-2"/>
+            </div>
+          </div>
+          <!---->
+          <div class="row-image">
+              <img  src="../assets/product-xx59-headphones/desktop/image-gallery-3.jpg" alt="image"/>
+          </div>
+        </div>
 
-                          <div>
-                            <p>
-                              The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives 
-                  at your residence. Just make sure your address is correct so that your order will not be cancelled.
-                            </p>
-                          </div>
-                          </div>
-                          
-                        </div>
-                    </div>
-                  </div>
-                  <div id ="eMoneyDetails" class="hidden">
-                    <div>
-                      <label for="e-MoneyNumber">e-money number</label>
-                    <input type="text" name="eMoneyNumber" id="eMoneyNumber" placeholder="238521993">
-                    </div>
-                  <div>
-                    <label for="e-moneyPIN"> e-money PIN</label>
-                    <input type="text" name="emoneyPIN" id=" emoneyPIN" placeholder="6891">
-                  </div>
-                  </div>
-                </div>
-                <!---->
+        <div class="you-may-also-like">
+          <div class="you-may-also-like-text">
+            <h1>you may also like</h1>
+          </div>
+          <div class="you-may-also-like-images">
+            <div class="you-may-also-like-images-product">
+              <img src="../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg" alt="product"/>
+              <h1>XX99 MARK II</h1>
+              <div class="you-may-also-like-images-product-button">
+                <a href="./product-xx99-mark-two-headphones.html">
+                  <button>See Product</button>
+                </a>
               </div>
-
-               <!--creating summary card-->
-  <div class="summary-container">
-    <div id ="cart-summary">
-      <div>
-    <p class="summary-p"> Summary</p>
-    <ul id="summary-items">
-
-    </ul>
-  
-    <div class="grandTotal-summary">
-      <p><span class="total-price-summary-checkout">TOTAL</span><span id="totalPriceSumary">0.00</span></p>
-    <p><span class="total-price-summary-checkout"> SHIPPING</span><span id="shippingPrice">0.00</span></p>
-    <p><span class="total-price-summary-checkout">VAT (INCLUDED)</span><span id="vatFee">0.00</span></p>
-      <p> <span class="total-price-summary-checkout"> Grand total</span><span id="grandTotal">0.00</span></p>
-    </div>
-
-    <button class="Continue-pay" type="submit" onsubmit="submitForm(event)"> Continue & pay</button>
-   
-  </div>
-    
-      </div>
-
-   </div>
-  </div>
-   <!--ending summary card-->
-            </form>
+            </div>
+            <div class="you-may-also-like-images-product">
+              <img src="../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg"/>
+              <h1>XX99 MARK I</h1>
+              <div class="you-may-also-like-images-product-button">
+                <a href="./product-xx99-mark-one-headphones.html">
+                  <button>See Product</button>
+                </a>
+              </div>
+            </div>
+            <div class="you-may-also-like-images-product">
+              <img src="../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg" alt="product"/>
+              <h1>ZX9 SPEAKER</h1>
+              <div class="you-may-also-like-images-product-button">
+                <a href="./product-zx9-speaker.html">
+                  <button>See Product</button>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-<!---->
 
- 
-    
-    
-      
+        <div class="product-main-product-headphone">
+          <div class="product-preview-product-headphone">
+            <img src="../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg" alt="headPhone"/>
+            <h1>Headphones</h1>
+            <p>
+              <button class="shopbutton">
+                Shop<a class="shop-icon" href="./headphones.html"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                  <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" stroke-width="2"/>
+                </svg></a>
+              </button>
+            </p>
+          </div>
+          
+          <div class="product-preview-product-headphone">
+            <img src="../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg" alt="speaker"/>
+            <h1>SPEAKERS</h1>
+            <p>
+              <button class="shopbutton">
+                Shop<a class="shop-icon" href="./speakers.html"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                  <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" stroke-width="2"/>
+                </svg></a>
+              </button>
+            </p>
+          </div>
+          
+          
+          <div class="product-preview-product-headphone">
+            <img src="../assets/product-yx1-earphones/desktop/image-category-page-preview.jpg" alt="speaker"/>
+            <h1>EARPHONES</h1>
+            <p>
+              <button class="shopbutton">
+                Shop<a class="shop-icon" href="./earphones.html"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                  <path d="M1.3219 1L6.3219 6L1.3219 11" stroke="#D87D4A" stroke-width="2"/>
+                </svg></a>
+              </button>
+            </p>
+          </div>
+          </div>
 
-   
-</div>
-  
- 
-  
-
-  
-
-  <!-- Success Modal -->
-  <div id="thankYouPage" class="hidden">
-    <div class="thankyouIcon">
-<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#D87D4A" cx="32" cy="32" r="32"/><path stroke="#FFF" stroke-width="4" d="m20.754 33.333 6.751 6.751 15.804-15.803"/></g></svg>
-
-    </div>
-    <h1>Thank you for your order</h1>
-    <p class="confirmationEmail"> You will receive an email confirmation shortly.</p>
-
-    <div class="displayCartItemsONThankyouPage"   id="thankYouItems">
-       <div class="imagethankYoupage">
-       <div>
-        <img src="./assets/cart/image-xx59-headphones.jpg" alt="product image" class="thankyouimage"/>
-       </div>
-       <div>
-        <img  src="./assets/cart/image-xx99-mark-two-headphones.jpg" alt="product image" class="thankyouimage"/>
-       </div>
-        <div>
-          <img src="./assets/cart/image-yx1-earphones.jpg" alt="product image" class="thankyouimage"/>
+           <!--best gear-->
+      <div class="Best-gear-product-headphone">
+        <div class="Best-gear-text-product-headphone">
+          <h1> Bringing you the <span class="best-product-headphone">best</span> audio gear</h1>
+          <p> Located at the heart of New York City, Audiophile is the premier store for high end headphones, 
+            earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration 
+            rooms available for you to browse and experience a wide range of our products. Stop by our store 
+            to meet some of the fantastic people who make Audiophile the best place to buy your portable 
+            audio equipment.</p>
+        </div>
+        <div class="Best-gear-image-product-headphone">
+          <img src="../assets/shared/desktop/image-best-gear.jpg" alt="man"/>
         </div>
       </div>
+    <!---->
 
-      <div class="grandTotalthankyoupage">
-          <p class="grandTotalthankyoupageText">GRAND TOTAL</p> 
-          <span class="grandTotalthankyoupageAmount">$ 5,446</span> 
+
+
       </div>
-    </div>
 
-<div class="Back-to-home">
-  <a href="./index.html">
-    <button type="button" >Back to home</button>
-  </a>
-</div>
 
+    <!---->
   </div>
- 
-  <!-- End success modal -->
 
 
-  <footer>
+   <!--footer-->
+    
+   <footer>
     <div class="footer-container-product-headphone">
       <div class="empty-footer-product-headphone"></div>
       <div class="footer-navbar-product-headphone">
@@ -292,7 +248,7 @@
        </div>
        <div class="footer-nav-product-headphone">
         <nav>
-          <a href="./index.html" class="htmlLink">Home</a>
+          <a href="../" class="htmlLink">Home</a>
           <a href="./headphones.html" class="htmlLink"> Headphones</a>
           <a href="./speakers.html" class="htmlLink">Speakers</a>
           <a href="./earphones.html" class="htmlLink"> Earphones</a>
@@ -331,9 +287,7 @@
     </div>
   </footer>
 
- </div>
-
- <script src="./script.js"></script>
+  <script src="../script.js"></script>
 </body>
 
 </html>
